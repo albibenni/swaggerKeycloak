@@ -12,7 +12,7 @@ import java.io.IOException;
 @Slf4j
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {
     @Override
-    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, IOException {
+    public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException {
         log.info("INSIDE COMMENCE");
         response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Unauthorized");
     }
